@@ -22,11 +22,13 @@ e-commerce/
 │   │   │   ├── ProductsList.js
 │   │   │   ├── ProductDetails.js
 │   │   │   └──  AddProduct.js
-│   │   └──  cart/
-│   │       ├── Cart.js
-│   │       ├── CartItems.js
-│   │       ├── scrollbar.css
-│   │       └── EmptyCart.js
+│   │   ├──  cart/
+│   │   |   ├── Cart.js
+│   │   |   ├── CartItems.js
+│   │   |   ├── scrollbar.css
+│   │   |   └── EmptyCart.js
+│   │   └──  error/
+│   │       └── ErrorPage.js
 │   ├── redux/
 │   │   ├── ecommerceSlice.js
 │   │   └── store.js
