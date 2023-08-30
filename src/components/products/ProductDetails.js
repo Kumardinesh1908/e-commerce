@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { addToCart } from '../redux/ecommerceSlice';
+import { addToCart } from '../../redux/ecommerceSlice';
 import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import star from "../assests/star.png";
-import halfStar from "../assests/halfStar.png";
-import emptyStar from "../assests/emptyStar.png"
+import star from "../../assests/star.png";
+import halfStar from "../../assests/halfStar.png";
+import emptyStar from "../../assests/emptyStar.png";
+import productImage from "../../assests/product-Image.png"
+
 
 export const ProductDetails = () => {
 
@@ -17,7 +19,6 @@ export const ProductDetails = () => {
     const product = products.find((product) => product.title === title);
 
     const [cartButton, setCartButton] = useState(false);
-
     const [selectedQuantity, setSelectedQuantity] = useState(1);
 
     // Function to handle quantity change
@@ -44,13 +45,13 @@ export const ProductDetails = () => {
         <div className='flex bg-white justify-between'>
 
             <div className='w-[38%] mt-4 '>
-                <img src={product.thumbnail} className='w-full h-[85%]' alt="productImage" />
+                <img src={product.thumbnail || productImage} className='w-full h-[85%]' alt="productImage" />
             </div>
 
             <div className='w-[35%] mt-2 ' >
-                <h1 className='text-[26px] font-bold'>{product.title}</h1>
+                <h1 className='text-[26px] font-bold capitalize'>{product.title}</h1>
                 <div className='flex border-b-[1px] border-gray-200 pb-1'>
-                    <span>{product.rating}&nbsp;</span>
+                    <span className='text-blue-500'>{product.rating}&nbsp;</span>
                     <span className='flex items-center '>
                         {[1, 2, 3, 4, 5].map((starIndex) => (
                             <img
@@ -112,7 +113,7 @@ export const ProductDetails = () => {
                 </div>
             </div>
 
-            <div className='w-[20%] border-[0.066rem] border-gray-200 rounded-lg p-3 mt-2 mr-5'>
+            <div className='w-[20%] h-[50%] border-[0.066rem] border-gray-200 rounded-lg p-3 mt-2 mr-5'>
                 <div className='flex items-center'>
                     <span className='text-[26px] font-medium text-red-600'>₹&nbsp;{product.price}</span>
                     <span>&nbsp;(10% Off)</span>
