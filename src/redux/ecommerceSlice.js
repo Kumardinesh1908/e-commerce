@@ -5,6 +5,7 @@ import axios from 'axios';
 const initialState = {
   cart: [],       // Cart containing selected products
   products: [],   // List of products
+  error: null,    // Error state for handling API errors
 };
 
 // Action creator to get all products
@@ -88,7 +89,7 @@ export const ecommerceSlice = createSlice({
         }
       })
       .addCase(fetchProducts.rejected, (state, action) => {
-        // Handle error state if needed
+        state.error = action.error.message; // Set the error message in the state
       });
   },
 });

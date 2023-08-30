@@ -4,15 +4,19 @@ import ProductsList from "./components/products/ProductsList";
 import { ProductDetails } from "./components/products/ProductDetails";
 import { AddProduct } from "./components/products/AddProduct";
 import Cart from "./components/cart/Cart";
+import ErrorPage from "./components/error/ErrorPage";
 import image from "./assests/online-shopping-image.avif";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { fetchProducts } from "./redux/ecommerceSlice"; // Import your fetchProducts action
 
 function App() {
+
+  // Create a BrowserRouter with routes
   const router = createBrowserRouter([
     {
       path: "/",
+      errorElement: <ErrorPage />,
       element: <Navbar />,
       children: [
         {
