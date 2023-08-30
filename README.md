@@ -15,23 +15,26 @@ e-commerce/
 │   └── ... (public assets)
 ├── src/
 │   ├── assets/
-│   │   └── ... (images and other assets)
+│   │   └── ... (images)
 │   ├── components/
 │   │   ├── Navbar.js
 │   │   ├── products/
 │   │   │   ├── ProductsList.js
 │   │   │   ├── ProductDetails.js
-│   │   │   ├── AddProduct.js
-│   │   ├── cart/
-│   │   │   ├── Cart.js
-│   │   │   ├── CartItems.js
-│   │   ├── ... (other components)
+│   │   │   └──  AddProduct.js
+│   │   └──  cart/
+│   │       ├── Cart.js
+│   │       ├── CartItems.js
+│   │       ├── scrollbar.css
+│   │       └── EmptyCart.js
 │   ├── redux/
 │   │   ├── ecommerceSlice.js
-│   │   └── ... (other Redux-related files)
+│   │   └── store.js
 │   ├── App.js
-│   └── index.js
+│   ├── index.js
+│   └── index.css
 ├── package.json
+├── tailwind.config.js
 └── README.md
 ```
 
