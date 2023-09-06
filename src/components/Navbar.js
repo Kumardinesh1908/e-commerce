@@ -27,7 +27,12 @@ export const Navbar = () => {
                 {/* Logo and navigation links */}
                 <div className='flex flex-row w-[30%] justify-around items-center'>
                     <Link to="/">
-                        <p className='text-3xl font-semibold text-white'>eCommerce</p>
+                        <p className='text-4xl font-semibold' style={{
+                            backgroundImage: 'linear-gradient(135deg, #ff6b6b, #b3ffcc,#b3ffcc, #ffe066)',
+                            WebkitBackgroundClip: 'text',
+                            color: 'transparent',
+                        }}>
+                            eCommerce</p>
                     </Link>
                     <Link to="/allProducts">
                         <p className='text-2xl font-semibold text-white'>All Products</p>
@@ -36,7 +41,7 @@ export const Navbar = () => {
 
                 {/* User profile and cart icons with item count */}
                 <div className='flex flex-row gap-5 items-center relative'>
-                    <p className='text-xl font-semibold'>Dinesh Kumar</p>
+                    <p className='text-xl font-semibold '>Dinesh Kumar</p>
                     <div className='w-10 h-10'>
                         <img src={profile} alt="user" />
                     </div>
