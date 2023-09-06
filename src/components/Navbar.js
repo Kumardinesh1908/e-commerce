@@ -36,7 +36,7 @@ export const Navbar = () => {
 
                 {/* User profile and cart icons with item count */}
                 <div className='flex flex-row gap-5 items-center relative'>
-                    <p className='text-xl font-semibold'>John Doe</p>
+                    <p className='text-xl font-semibold'>Dinesh Kumar</p>
                     <div className='w-10 h-10'>
                         <img src={profile} alt="user" />
                     </div>
