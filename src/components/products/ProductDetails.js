@@ -115,7 +115,7 @@ export const ProductDetails = () => {
 
             <div className='w-[20%] h-[50%] border-[0.066rem] border-gray-200 rounded-lg p-3 mt-2 mr-5'>
                 <div className='flex items-center'>
-                    <span className='text-[26px] font-medium text-red-600'>₹&nbsp;{product.price}</span>
+                    <span className='text-[26px] font-medium text-red-600 '>₹&nbsp;{product.price}</span>
                     <span>&nbsp;(10% Off)</span>
                 </div>
                 <span className='text-blue-500'>Delivery&nbsp;</span><span>within Two Days.</span>

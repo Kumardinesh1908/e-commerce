@@ -4,8 +4,15 @@ import { Link } from 'react-router-dom';
 import { addToCart, productDeleted, updateProduct } from '../../redux/ecommerceSlice';
 import star from "../../assests/star.png";
 import halfStar from "../../assests/halfStar.png";
-import emptyStar from "../../assests/emptyStar.png"
-import productImage from "../../assests/product-Image.png"
+import emptyStar from "../../assests/emptyStar.png";
+import productImage from "../../assests/product-Image.png";
+import edit from "../../assests/edit.png";
+import Delete from "../../assests/Delete.png";
+import save from "../../assests/save.png";
+import cancel from "../../assests/cancel.png";
+import cart from "../../assests/cart.png";
+
+
 
 const ProductsList = () => {
     const dispatch = useDispatch(); // Get dispatch function from Redux store
@@ -210,32 +217,36 @@ const ProductsList = () => {
                                 {editedProduct === product ? (
                                     <button
                                         onClick={handleSaveEdit}
-                                        className='text-lg font-medium w-full text-center rounded-lg bg-lime-300 hover:bg-lime-400 p-[4px] shadow active:ring-2 active:ring-offset-1 active:ring-blue-500'
-                                    >
-                                        Save
+                                        className='text-lg font-medium w-full text-center rounded-lg bg-lime-300 hover:bg-lime-400 p-[4px] shadow active:ring-2 active:ring-offset-1 active:ring-blue-500 flex flex-row items-center justify-center gap-3'
+                                        >
+                                            <img src= {save} alt="save" className='w-5 h-5'/>
+                                            <span>Save</span>
                                     </button>
                                 ) : (
                                     <button
                                         onClick={() => handleEditClick(product)}
-                                        className='text-lg font-medium w-full text-center rounded-lg bg-gray-200 hover:bg-gray-300 p-[4px] shadow active:ring-2 active:ring-offset-1 active:ring-blue-500'
+                                        className='text-lg font-medium w-full text-center rounded-lg bg-gray-200 hover:bg-gray-300 p-[4px] shadow active:ring-2 active:ring-offset-1 active:ring-blue-500 flex flex-row items-center justify-center gap-3'
                                     >
-                                        Edit
+                                        <img src= {edit} alt="edit" className='w-5 h-5'/>
+                                        <span>Edit</span>
                                     </button>
                                 )}
 
                                 {editedProduct === product ? (
                                     <button
                                         onClick={() => handleCancelEdit(product)}
-                                        className='text-lg font-medium w-full text-center rounded-lg bg-red-300 hover:bg-red-400 p-[4px] shadow active:ring-2 active:ring-offset-1 active:ring-blue-500'
+                                        className='text-lg font-medium w-full text-center rounded-lg bg-red-300 hover:bg-red-400 p-[4px] shadow active:ring-2 active:ring-offset-1 active:ring-blue-500 flex flex-row items-center justify-center gap-3'
                                     >
-                                        Cancel
+                                        <img src= {cancel} alt="cancel" className='w-4 h-4'/>
+                                        <span>Cancel</span>
                                     </button>
                                 ) : (
                                     <button
                                         onClick={() => handleDeleteClick(product)}
-                                        className='text-lg font-medium w-full text-center rounded-lg bg-red-300 hover:bg-red-400 p-[4px] shadow active:ring-2 active:ring-offset-1 active:ring-blue-500'
+                                        className='text-lg font-medium w-full text-center rounded-lg bg-red-300 hover:bg-red-400 p-[4px] shadow active:ring-2 active:ring-offset-1 active:ring-blue-500 flex flex-row items-center justify-center gap-3'
                                     >
-                                        Delete
+                                        <img src= {Delete} alt="Delete" className='w-5 h-5 '/>
+                                        <span>Delete</span>
                                     </button>
                                 )}
                             </div>
@@ -243,9 +254,10 @@ const ProductsList = () => {
                             {/* Add to Cart Button */}
                             <button
                                 onClick={() => handleAddToCart(product)}
-                                className='text-lg font-medium w-full text-center rounded-lg bg-yellow-300 hover:bg-yellow-400 p-[4px] mt-3 shadow active:ring-2 active:ring-offset-1 active:ring-blue-500'
-                            >
-                                Add to Cart
+                                className='text-lg font-medium w-full text-center rounded-lg bg-yellow-300 hover:bg-yellow-400 p-[4px] mt-3 shadow active:ring-2 active:ring-offset-1 active:ring-blue-500 flex flex-row items-center justify-center gap-5'
+                                >
+                                    <img src= {cart} alt="cart" className='w-6 h-6 '/>
+                                    <span>Add to cart</span>
                             </button>
                         </div>
                     </div>
