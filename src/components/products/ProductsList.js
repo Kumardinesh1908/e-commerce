@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { addToCart, productDeleted, updateProduct } from '../../redux/ecommerceSlice';
@@ -11,8 +11,7 @@ import Delete from "../../assests/Delete.png";
 import save from "../../assests/save.png";
 import cancel from "../../assests/cancel.png";
 import cart from "../../assests/cart.png";
-
-
+import cross from "../../assests/cross.png";
 
 const ProductsList = () => {
     const dispatch = useDispatch(); // Get dispatch function from Redux store
@@ -20,17 +19,17 @@ const ProductsList = () => {
 
     // State for sorting products
     const [sortedProducts, setSortedProducts] = useState([]);
-    const [sortAscending, setSortAscending] = useState(true); 
+    const [sortAscending, setSortAscending] = useState(false); 
 
     // Sort products based on price
-    useEffect(() => {
-        const sorted = [...products].sort((a, b) => {
-            return sortAscending ? a.price - b.price : b.price - a.price;
-        });
-        setSortedProducts(sorted);
-    }, [products, sortAscending]);
+    useEffect(()=>{
+    const sorted = [...products].sort((a, b) => a.price - b.price );
+    if(sortAscending) 
+    {setSortedProducts(sorted) } 
+    else
+    {setSortedProducts(products)} },[sortAscending , products])
 
-    // Toggle sorting direction
+    // Toggle sorting button
     const handleToggleSort = () => {
         setSortAscending(!sortAscending);
     };
@@ -132,8 +131,9 @@ const ProductsList = () => {
                         Add new product +
                     </button>
                 </Link>
-                <button className='px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white rounded-md font-semibold text-lg' onClick={handleToggleSort}>
-                    Sort by Price {sortAscending ? '↑' : '↓'}
+                <button onClick={handleToggleSort} className='px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white rounded-md font-semibold text-lg flex flex-row items-center justify-center gap-3'>
+                    <span>Sort by Price</span> 
+                    {sortAscending ? <img src= {cross} alt="cross" className='w-5 h-5 '/> : null}
                 </button>
             </div>
 

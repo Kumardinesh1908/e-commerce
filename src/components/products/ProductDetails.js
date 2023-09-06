@@ -5,7 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import star from "../../assests/star.png";
 import halfStar from "../../assests/halfStar.png";
 import emptyStar from "../../assests/emptyStar.png";
-import productImage from "../../assests/product-Image.png"
+import productImage from "../../assests/product-Image.png";
+import cart from "../../assests/cart.png";
 
 
 export const ProductDetails = () => {
@@ -78,7 +79,7 @@ export const ProductDetails = () => {
                     <div className='flex justify-between'>
                         <div className='w-[30%] border-2 border-gray-200 rounded-lg p-2'>
                             <p className='font-semibold '>No Cost EMI</p>
-                            <p>EMI interest savings on Amazon Pay ICICI…</p>
+                            <p>EMI interest savings on eCommerce Pay ICICI…</p>
                         </div>
                         <div className='w-[30%] border-2 border-gray-200 rounded-lg p-2'>
                             <p className='font-semibold '>Bank Offers</p>
@@ -142,8 +143,10 @@ export const ProductDetails = () => {
                             handleAddToCart(product);
                             setCartButton(true);
                         }}
-                        className={`pt-2 w-full text-center rounded-2xl bg-yellow-300 hover:bg-yellow-400 p-[4px] mt-3 shadow active:ring-2 active:ring-offset-1 active:ring-blue-500`}>
-                        Add to Cart
+                        className='text-lg font-medium w-full text-center rounded-2xl bg-yellow-300 hover:bg-yellow-400 p-[4px] mt-3 shadow active:ring-2 active:ring-offset-1 active:ring-blue-500 flex flex-row items-center justify-center gap-5'
+                    >
+                        <img src={cart} alt="cart" className='w-6 h-6 ' />
+                        <span>Add to cart</span>
                     </button>}
                 <p className='text-blue-500 pt-3'>Secure transaction</p>
             </div>
