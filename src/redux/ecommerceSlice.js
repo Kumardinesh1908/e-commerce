@@ -33,7 +33,7 @@ export const ecommerceSlice = createSlice({
   reducers: {
     // Reducer function for adding a product to the cart
     addToCart: (state, action) => {
-      const product = state.cart.find((product) => product.title === action.payload.title && product.quantity === action.payload.quantity);
+      const product = state.cart.find((product) => product.title === action.payload.title );
       if (product) {
         product.quantity += action.payload.quantity;
       } else {
