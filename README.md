@@ -21,11 +21,11 @@ Discover a seamless shopping experience with our e-commerce app, featuring easy 
 :clapper: **React-Router-Dom** <br>
 
 
-## Key Takeaways 🖥️ Programming
-:movie_camera: **State Management**: Utilizing Redux Toolkit to manage the global state and store for efficient data sharing across components.
-:movie_camera: **React Routing**: Implementing React Router for navigation and maintaining multiple views within the application.
-:movie_camera: **Component Structure**: Organizing components into modular and reusable structures to enhance readability and maintainability.
-:movie_camera: **API Integration**: Using Axios to interact with backend APIs for fetching, updating, and adding data.
+## Key Takeaways 🖥️
+:movie_camera: **State Management**: Utilizing Redux Toolkit to manage the global state and store for efficient data sharing across components.<br>
+:movie_camera: **React Routing**: Implementing React Router for navigation and maintaining multiple views within the application.<br>
+:movie_camera: **Component Structure**: Organizing components into modular and reusable structures to enhance readability and maintainability.<br>
+:movie_camera: **API Integration**: Using Axios to interact with backend APIs for fetching, updating, and adding data.<br>
 
 
 ## Folder Structure :file_folder:
