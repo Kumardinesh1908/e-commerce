@@ -17,6 +17,7 @@ Discover a seamless shopping experience with our e-commerce app, featuring easy 
 
 ## Tech Stack :computer:
 :clapper: **React** <br>
+:clapper: **Tailwind-CSS** <br>
 :clapper: **Redux Toolkit** <br>
 :clapper: **React-Router-Dom** <br>
 
