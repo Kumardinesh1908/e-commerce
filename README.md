@@ -85,6 +85,8 @@ npm run start
    
 
 ## Live Demo
-Check out the live demo of the App: https://e-commerce-kumardinesh1908.vercel.app/
+```
+ https://e-commerce-kumardinesh1908.vercel.app/
+````
 
 
